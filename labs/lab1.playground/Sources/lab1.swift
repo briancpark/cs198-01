@@ -29,7 +29,7 @@ public class Lab1 {
     // digits(0) -> [0]
     
     public func digits(_ n: Int) -> [Int] {
-        return [] // REPLACE THIS LINE
+        return String(n).compactMap { Int(String($0)) }
     }
     
     
@@ -45,7 +45,7 @@ public class Lab1 {
     
     
     public func inDict(_ key: Int, _ dict: [Int: String]) -> String {
-        return "None" // REPLACE THIS LINE
+        return dict[key] ?? "None"
     }
     
     

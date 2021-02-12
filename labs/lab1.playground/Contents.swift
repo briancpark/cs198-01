@@ -38,6 +38,6 @@ public class InDictTest: XCTestCase {
     }
 }
 
-//GetAlbumReleaseTest.defaultTestSuite.run()
-//DigitsTest.defaultTestSuite.run()
-//InDictTest.defaultTestSuite.run()
+GetAlbumReleaseTest.defaultTestSuite.run()
+DigitsTest.defaultTestSuite.run()
+InDictTest.defaultTestSuite.run()

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plE-VQ-t77" customClass="HorizontalProgressBar" customModule="Lab2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="374" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gn8-mS-gHH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7yA-SS-TLh" customClass="CircularProgressBar" customModule="Lab2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="124" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="0eN-lx-4Lb"/>
+                                    <constraint firstAttribute="height" constant="100" id="7zF-DG-HFo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="ringWidth">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-5" translatesAutoresizingMaskIntoConstraints="NO" id="oFP-RS-9YP">
+                                <rect key="frame" x="284" y="136.5" width="110" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6M0-42-bcq">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="52.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" red="1" green="0.80000000000000004" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FILLED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFM-s0-U9M">
+                                        <rect key="frame" x="0.0" y="47.5" width="110" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="R2J-yu-n9Y"/>
+                                    <constraint firstAttribute="height" constant="75" id="eqo-49-LQQ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xRj-W8-0C2">
+                                <rect key="frame" x="334" y="712" width="60" height="140"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ull-8C-b81">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <state key="normal" title="+ 10%">
+                                            <color key="titleColor" red="0.40784313729999999" green="1" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNX-RV-n2C">
+                                        <rect key="frame" x="0.0" y="80" width="60" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <state key="normal" title="- 10%">
+                                            <color key="titleColor" red="1" green="0.40784313729999999" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="6Fh-dq-lbt"/>
+                                    <constraint firstAttribute="height" constant="140" id="XPe-5y-Rnu"/>
+                                </constraints>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="O0u-Zt-aT5">
+                                <rect key="frame" x="20" y="254" width="374" height="32"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="2y1-03-Gmi"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Yellow"/>
+                                    <segment title="Green"/>
+                                    <segment title="Red"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="1" green="0.80000000000000004" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="backgroundColorChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="rHh-OS-Ypk"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oFP-RS-9YP" secondAttribute="trailing" constant="20" id="C8l-4C-bLm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O0u-Zt-aT5" secondAttribute="trailing" constant="20" id="Gj3-Dj-B0p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="plE-VQ-t77" secondAttribute="trailing" constant="20" id="N1i-ff-cFF"/>
+                            <constraint firstItem="plE-VQ-t77" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Odp-vu-Xka"/>
+                            <constraint firstItem="O0u-Zt-aT5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Q3A-Xr-sSH"/>
+                            <constraint firstItem="O0u-Zt-aT5" firstAttribute="top" secondItem="7yA-SS-TLh" secondAttribute="bottom" constant="30" id="QqK-J1-0oe"/>
+                            <constraint firstItem="plE-VQ-t77" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="VKP-Kc-WFr"/>
+                            <constraint firstItem="7yA-SS-TLh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="biY-id-kYS"/>
+                            <constraint firstItem="7yA-SS-TLh" firstAttribute="top" secondItem="plE-VQ-t77" secondAttribute="bottom" constant="30" id="ePu-X5-aaH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xRj-W8-0C2" secondAttribute="trailing" constant="20" id="uEE-wz-rAj"/>
+                            <constraint firstItem="xRj-W8-0C2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-10" id="why-o5-P2s"/>
+                            <constraint firstItem="oFP-RS-9YP" firstAttribute="centerY" secondItem="7yA-SS-TLh" secondAttribute="centerY" id="x89-Zx-KGQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addTenPercentButton" destination="Ull-8C-b81" id="b5g-Vw-ZKj"/>
+                        <outlet property="circularProgressBar" destination="7yA-SS-TLh" id="b5v-tr-8ga"/>
+                        <outlet property="horizontalProgressBar" destination="plE-VQ-t77" id="wpo-gO-PdM"/>
+                        <outlet property="progressLabel" destination="6M0-42-bcq" id="ojo-fl-ypk"/>
+                        <outlet property="segmentedControl" destination="O0u-Zt-aT5" id="jte-DE-sjv"/>
+                        <outlet property="subtractTenPercentButton" destination="PNX-RV-n2C" id="KoS-2C-1cj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+</document>

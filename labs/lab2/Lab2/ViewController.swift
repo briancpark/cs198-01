@@ -63,6 +63,19 @@ class ViewController: UIViewController {
             
     */
     
+    @IBAction func add10(_ sender: Any) {
+        progressLabel.text = String(horizontalProgressBar.addTenPercent())
+        horizontalProgressBar.animateProgress {}
+        circularProgressBar.addTenPercent()
+        circularProgressBar.animateProgress {}
+    }
+    
+    @IBAction func sub10(_ sender: Any) {
+        progressLabel.text = String(horizontalProgressBar.subtractTenPercent())
+        circularProgressBar.subtractTenPercent()
+        horizontalProgressBar.animateProgress {}
+        circularProgressBar.animateProgress {}
+    }
     
     //MARK:- PART 2
     
@@ -78,11 +91,11 @@ class ViewController: UIViewController {
     @IBAction func backgroundColorChanged(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            return // REPLACE WITH CODE
+            return changeUIColor(ProgressColors.yellow)
         case 1:
-            return // REPLACE WITH CODE
+            return changeUIColor(ProgressColors.green)
         case 2:
-            return // REPLACE WITH CODE
+            return changeUIColor(ProgressColors.red)
         default:
             return
         }

@@ -65,6 +65,9 @@
                                         <state key="normal" title="+ 10%">
                                             <color key="titleColor" red="0.40784313729999999" green="1" blue="0.57254901960000004" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="add10:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2k-Ff-miI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PNX-RV-n2C">
                                         <rect key="frame" x="0.0" y="80" width="60" height="60"/>
@@ -72,6 +75,9 @@
                                         <state key="normal" title="- 10%">
                                             <color key="titleColor" red="1" green="0.40784313729999999" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sub10:" destination="BYZ-38-t0r" eventType="touchUpInside" id="odb-h4-sSf"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

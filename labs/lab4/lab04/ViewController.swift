@@ -78,6 +78,12 @@ class ViewController: UIViewController {
         // Call the shuffle function of ImageModel
         // Iterate through the imageViews on the screen (see lines 32- 36 for an example) and replace the images
             // Use imageView.image to replace the image of an imageView
+        imageModel.shuffle()
+        for innerSubView in outerStackView.arrangedSubviews {
+            if let imageView = view as? UIImageView {
+                imageView.image = UIImage(named: String)
+            }
+        }
     }
     
     

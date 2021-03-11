@@ -22,7 +22,7 @@ class ImageModel {
     
     func shuffle() {
         //YOUR CODE HERE
-        
+        images.shuffle()
         //Randomly shuffle the images array
     }
 }

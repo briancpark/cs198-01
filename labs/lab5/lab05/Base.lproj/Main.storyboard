@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab05" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab05" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="3C2-Qs-aS4">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="story" id="3C2-Qs-aS4" customClass="StoryCollectionViewCell" customModule="lab05" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2Om-tr-SOb">
@@ -61,10 +61,6 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="100" height="100"/>
-                                        <connections>
-                                            <outlet property="profileImageView" destination="x0C-P5-FsD" id="zFe-ph-omN"/>
-                                            <outlet property="usernameLabel" destination="ke5-KP-8QO" id="u6t-ZB-dhX"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -72,7 +68,7 @@
                                 <rect key="frame" x="0.0" y="157" width="414" height="739"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="594" id="ZQh-hE-0FE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="post" rowHeight="594" id="ZQh-hE-0FE" customClass="PostTableViewCell" customModule="lab05" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="594"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZQh-hE-0FE" id="76U-Sj-kr3">
@@ -186,13 +182,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="caption" destination="Wp8-7u-ZzB" id="mt2-jH-1Tg"/>
-                                            <outlet property="likes" destination="AQs-Ta-0nv" id="7aY-6m-l9B"/>
-                                            <outlet property="postImage" destination="5W4-S1-mFL" id="Isc-8X-HfH"/>
-                                            <outlet property="profileImageView" destination="sFk-3d-fUL" id="wLV-RB-NPv"/>
-                                            <outlet property="username" destination="bkN-BP-mQf" id="sP1-ml-EGM"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -211,8 +200,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="oOb-iF-EMk"/>
                     <connections>
-                        <outlet property="feedTableView" destination="vs2-4s-7CO" id="WD1-k1-1gS"/>
-                        <outlet property="storyCollectionView" destination="kGp-gP-sde" id="yDB-1f-BOH"/>
+                        <outlet property="feedTableView" destination="vs2-4s-7CO" id="X5t-HW-Odg"/>
+                        <outlet property="storyCollectionView" destination="kGp-gP-sde" id="AwA-sI-gv5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

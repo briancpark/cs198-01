@@ -23,9 +23,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         
         //SET COLLECTION VIEW DELEGATE AND DATA SOURCE
-        
+        storyCollectionView.dataSource = self
+        storyCollectionView.delegate = self
         //SET TABLE VIEW DELEGATE AND DATA SOURCE
-        
+        feedTableView.dataSource = self
+        feedTableView.delegate = self
         feedModel.createFeed()
         storyModel.createStories()
     }
@@ -37,7 +39,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 extension ViewController {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // COUNT NUMBER OF ELEMENTS IN stories ARRAY IN STORYMODEL
-        return 0
+        return storyModel.stories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,18 +47,21 @@ extension ViewController {
         // CAST TO storyCollectionViewCell
         // CALL SETUP ON CELL
         // RETURN CELL
-        
-        return UICollectionViewCell()
+        if let cell = storyCollectionView.dequeueReusableCell(withReuseIdentifier: "story", for: indexPath) as? StoryCollectionViewCell {
+            let currentStory = storyModel.stories[indexPath.row]
+            cell.setup(profile: currentStory.profileImage, username: currentStory.username)
+            return cell
+        } else {
+            return UICollectionViewCell()
+        }
     }
-    
-    
 }
 
 // TABLE VIEW METHODS
 extension ViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // COUNT NUMBER OF ELEMENTS IN posts ARRAY IN FEEDMODEL
-        return 0
+        return feedModel.posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,10 +69,12 @@ extension ViewController {
         // CAST TO postTableViewCell
         // CALL SETUP ON CELL
         // RETURN CELL
-        
+        if let cell = feedTableView.dequeueReusableCell(withIdentifier: "post", for: indexPath) as? PostTableViewCell {
+            let currentPost = feedModel.posts[indexPath.row]
+            cell.setup(image: currentPost.image, username: currentPost.username, likes: currentPost.likes, caption: currentPost.caption)
+            return cell
+        }
         return UITableViewCell()
     }
-    
-    
 }
 

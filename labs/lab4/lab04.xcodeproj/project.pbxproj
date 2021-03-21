@@ -14,6 +14,7 @@
 		01B2097F25F01B81009A4331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B2097E25F01B81009A4331 /* Assets.xcassets */; };
 		01B2098225F01B81009A4331 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B2098025F01B81009A4331 /* LaunchScreen.storyboard */; };
 		01B2098B25F035F7009A4331 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B2098A25F035F7009A4331 /* ImageModel.swift */; };
+		4F8E16E82607023E00208FC4 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8E16E72607023E00208FC4 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		01B2098125F01B81009A4331 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01B2098325F01B81009A4331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B2098A25F035F7009A4331 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		4F8E16E72607023E00208FC4 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				01B2097E25F01B81009A4331 /* Assets.xcassets */,
 				01B2098025F01B81009A4331 /* LaunchScreen.storyboard */,
 				01B2098325F01B81009A4331 /* Info.plist */,
+				4F8E16E72607023E00208FC4 /* ImageViewController.swift */,
 			);
 			path = lab04;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			files = (
 				01B2097A25F01B80009A4331 /* ViewController.swift in Sources */,
 				01B2097625F01B80009A4331 /* AppDelegate.swift in Sources */,
+				4F8E16E82607023E00208FC4 /* ImageViewController.swift in Sources */,
 				01B2097825F01B80009A4331 /* SceneDelegate.swift in Sources */,
 				01B2098B25F035F7009A4331 /* ImageModel.swift in Sources */,
 			);
@@ -291,7 +295,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PM79C3BXFD;
+				DEVELOPMENT_TEAM = QP74AMM38Y;
 				INFOPLIST_FILE = lab04/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,7 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PM79C3BXFD;
+				DEVELOPMENT_TEAM = QP74AMM38Y;
 				INFOPLIST_FILE = lab04/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

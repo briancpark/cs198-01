@@ -63,14 +63,16 @@ class ViewController: UIViewController {
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         if let currentImageTapped = tapGestureRecognizer.view as? UIImageView {
             //YOUR CODE HERE
-            
             // Set selectedImage
+            selectedImage = currentImageTapped.image
+            performSegue(withIdentifier: "perform", sender: nil)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //YOUR CODE HERE
-        
+        let vc = segue.destination as! ImageViewController
+        vc.tappedImage = selectedImage
         // Pass selectedImage to your new ViewController
     }
     
@@ -79,9 +81,19 @@ class ViewController: UIViewController {
         // Iterate through the imageViews on the screen (see lines 32- 36 for an example) and replace the images
             // Use imageView.image to replace the image of an imageView
         imageModel.shuffle()
+        var i = 0
+        
         for innerSubView in outerStackView.arrangedSubviews {
-            if let imageView = view as? UIImageView {
-                imageView.image = UIImage(named: String)
+            // We know that innerSubView is of type UIStackView, but arrangedSubviews returns it as
+            // type UIView so we have to cast it to UIStackView
+            guard let innerStackView = innerSubView as? UIStackView else { return }
+            
+            for view in innerStackView.arrangedSubviews {
+            
+                if let imageView = view as? UIImageView {
+                    imageView.image = imageModel.images[i]
+                    i += 1
+                }
             }
         }
     }
